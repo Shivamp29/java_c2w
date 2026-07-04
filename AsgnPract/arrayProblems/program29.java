@@ -1,12 +1,12 @@
 /*
  *
- *	Write a program to take the numbers from the user in a 2d array and print the array
+ *	Write a program to take the numbers from the user in a 2d array and print the product of sum of primary and secondary diagonal of 2d array
  *
  */
 
 import java.util.Scanner;
 
-class Program21{
+class Program29{
 	public static void main(String[] args){
 		Scanner ip = new Scanner(System.in);
 
@@ -27,14 +27,23 @@ class Program21{
 			}
 
 		}
-
-		 System.out.println("2d array elemnets are : ");
+		int sum = 0; 
+		int sum1 = 0;
+		int  num = row-1;
 		for(int i = 0 ; i < row; i++){
+			
                         for(int j = 0 ; j< col ; j++){
-                                 System.out.print(arr[i][j]+ " ");
+				if( num == j ){
+                                	sum += arr[i][j];
+				}
+				if( i == j){
+					sum1 += arr[i][j];
+				}
                         }
-			 System.out.println();
-                }
-
-	}	
+			num--;
+			System.out.println();
+           	}
+		System.out.println("Product of Sum of primary & secondary diagonal is : "+(sum * sum1));
+		
+		}	
 }

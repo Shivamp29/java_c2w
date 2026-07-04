@@ -1,12 +1,12 @@
 /*
  *
- *	Write a program to take the numbers from the user in a 2d array and print the array
+ *	Write a program to take the numbers from the user in a 2d array and print the sum of odd rows
  *
  */
 
 import java.util.Scanner;
 
-class Program21{
+class Program24{
 	public static void main(String[] args){
 		Scanner ip = new Scanner(System.in);
 
@@ -27,14 +27,16 @@ class Program21{
 			}
 
 		}
-
-		 System.out.println("2d array elemnets are : ");
+		
 		for(int i = 0 ; i < row; i++){
-                        for(int j = 0 ; j< col ; j++){
-                                 System.out.print(arr[i][j]+ " ");
-                        }
-			 System.out.println();
-                }
+			if((i+1) % 2 != 0){
+				int sum =0;
+                       		 for(int j = 0 ; j< col ; j++){
+                                	sum+= arr[i][j];
+                       		 }
+				System.out.println("Sum of "+i + "row is : "+sum);
+			}
+           	}
 
 	}	
 }

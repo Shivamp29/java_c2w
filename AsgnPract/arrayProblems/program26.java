@@ -1,12 +1,12 @@
 /*
  *
- *	Write a program to take the numbers from the user in a 2d array and print the array
+ *	Write a program to take the numbers from the user in a 2d array and print the elements which are divisible by 3
  *
  */
 
 import java.util.Scanner;
 
-class Program21{
+class Program26{
 	public static void main(String[] args){
 		Scanner ip = new Scanner(System.in);
 
@@ -28,13 +28,16 @@ class Program21{
 
 		}
 
-		 System.out.println("2d array elemnets are : ");
+		System.out.println("elements divisible by 3 : ");
 		for(int i = 0 ; i < row; i++){
+		
                         for(int j = 0 ; j< col ; j++){
-                                 System.out.print(arr[i][j]+ " ");
+                                if(arr[i][j] % 3 == 0){
+					System.out.print(arr[i][j]+" ");
+				};
                         }
-			 System.out.println();
-                }
+			System.out.println();
+		}
 
 	}	
 }
